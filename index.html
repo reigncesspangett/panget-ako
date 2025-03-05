@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Vending Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="registerForm">
+            <h2>Register</h2>
+            <input type="text" id="regUsername" placeholder="Username" required>
+            <input type="password" id="regPassword" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+        </div>
+
+        <div id="loginForm" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="adminLoginForm" style="display: none;">
+            <h2>Admin Login</h2>
+            <input type="text" id="adminUsername" placeholder="Admin Username" required>
+            <input type="password" id="adminPassword" placeholder="Admin Password" required>
+            <button onclick="adminLogin()">Login</button>
+        </div>
+
+        <div id="userDashboard" style="display: none;">
+            <h2>Welcome, <span id="userWelcome"></span></h2>
+            <p>Bottles Recycled: <span id="bottlesCount">0</span></p>
+            <p>Points Earned: <span id="pointsEarned">0</span></p>
+            <p>Points Used: <span id="pointsUsed">0</span></p>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div id="adminDashboard" style="display: none;">
+            <h2>Admin Dashboard</h2>
+            <p>Track bottles and points of users.</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
